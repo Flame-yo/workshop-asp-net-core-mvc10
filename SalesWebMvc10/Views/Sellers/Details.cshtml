@@ -41,9 +41,8 @@
             @Html.DisplayFor(model => model.Department.Name)
         </dd>
     </dl>
-
-    <form asp-action="Edit">
-        <input type="submit" value="Edit" asp-for="Id" class="btn btn-default"  />
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default">Edit</a>
+    <a asp-action="Index">Back to List</a>
 </div>
