@@ -35,7 +35,7 @@ namespace SalesWebMvc10.Services
         public void Remove(int id)
         {
             Seller obj = _context.Seller.Find(id);
-            _context.Remove(obj);
+            _context.Seller.Remove(obj);
             _context.SaveChanges();
         }
 
