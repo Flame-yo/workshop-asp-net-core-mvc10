@@ -19,7 +19,7 @@
                     <input type="date" name="maxDate" class="form-control" value=@ViewData["maxDate"] />
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn btn-primary">Filter</button>
         </form>
     </div>
 </nav>
@@ -34,6 +34,9 @@
                 <tr class="success">
                     <th>
                         @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Seller)
@@ -55,6 +58,9 @@
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Seller.Name)
