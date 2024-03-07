@@ -10,7 +10,7 @@ namespace SalesWebMvc10.Controllers
 {
     public class SalesRecordsController : Controller
     {
-        private SalesRecordService _salesRecordService;
+        private readonly SalesRecordService _salesRecordService;
 
         public SalesRecordsController(SalesRecordService salesRecordService)
         {

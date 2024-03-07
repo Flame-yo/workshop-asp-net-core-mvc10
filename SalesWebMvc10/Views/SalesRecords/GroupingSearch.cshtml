@@ -21,7 +21,7 @@
                     <input type="date" name="maxDate" class="form-control" value=@ViewData["maxDate"] />
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn btn-primary">Filter</button>
         </form>
     </div>
 </nav>
@@ -40,10 +40,10 @@
                             Date
                         </th>
                         <th>
-                            Seller
+                            Amount
                         </th>
                         <th>
-                            Amount
+                            Seller
                         </th>
                         <th>
                             Status
@@ -53,20 +53,20 @@
                 <tbody>
                     @foreach (var item in departmentGroup)
                     {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Date)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Seller.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Amount)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Status)
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Seller.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                    </tr>
                     }
                 </tbody>
             </table>
